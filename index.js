@@ -5,7 +5,7 @@ let result = ``;
 
 const parseOutput = () => {
     console.log('Parsing the result...');
-    const regex = /.*\((.*?)\).*/gm;
+    const regex = /.*\[(.*?)\].*/gm;
     result.split("\n").filter((item) => regex.test(item)).map((item) => {
         var ip = item.replace(regex, '$1');
         var lookup = geoip.lookup(ip);
@@ -20,7 +20,7 @@ const parseOutput = () => {
     });
 }
 
-exec('traceroute www.google.com', (data) => {
+exec('tracert www.google.com', (data) => {
     result += data.toString();
     process.stdout.write(data);
 }, () => {
