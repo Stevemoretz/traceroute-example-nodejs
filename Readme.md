@@ -28,7 +28,7 @@ yarn install
 node index.js
 ```
 
-Output exmaple :
+Output example :
 
 ```
 1  192.168.1.1 (192.168.1.1)  2.546 ms  1.521 ms  1.769 ms
